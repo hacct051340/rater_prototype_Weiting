@@ -1,1 +1,1 @@
-# Kemper Rater Prototype - Basic Premium Calculation (Rule 2)
+# Kemper Rater Prototype - Basic Premium Calculation

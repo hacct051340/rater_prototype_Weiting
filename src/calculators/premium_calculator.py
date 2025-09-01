@@ -1,5 +1,5 @@
 """
-Main premium calculation orchestrator implementing Rule 2.
+Main premium calculation orchestrator implementing basic premium calculation.
 """
 from typing import List, Dict, Any
 from ..models.coverage import Coverage, CoverageType
@@ -14,7 +14,7 @@ from ..utils.term_calculation import is_annual_policy
 
 class PremiumCalculator:
     """
-    Main premium calculator implementing Rule 2 calculation method.
+    Main premium calculator implementing basic premium calculation method.
     
     Formula: Premium = BaseRate × ∏Factors × TermFactor
     """
@@ -39,7 +39,7 @@ class PremiumCalculator:
             Dictionary containing detailed calculation results
         """
         print("=" * 60)
-        print("Basic Premium Calculation (Rule 2)")
+        print("Basic Premium Calculation")
         print("=" * 60)
         
         # Find primary driver
@@ -85,7 +85,7 @@ class PremiumCalculator:
         results = {
             'total_premium': total_premium,
             'coverage_breakdown': coverage_results,
-            'calculation_method': 'Rule 2 - Basic Premium Calculation',
+            'calculation_method': 'Basic Premium Calculation',
             'policy_info': {
                 'effective_date': policy_info.policy_effective_date,
                 'expiry_date': policy_info.policy_expiry_date,

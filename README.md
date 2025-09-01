@@ -1,6 +1,6 @@
-# Kemper Rater Prototype - Basic Premium Calculation (Rule 2)
+# Kemper Rater Prototype - Basic Premium Calculation
 
-This is a prototype insurance rating system that implements the basic premium calculation method (Rule 2).
+This is a prototype insurance rating system that implements the basic premium calculation method.
 
 ## Calculation Formula
 
@@ -133,29 +133,118 @@ python -m pytest tests/
 - **COLL (Collision)**: Collision Coverage
 - **COMP (Comprehensive)**: Comprehensive Coverage
 
-## Supported Factor Types (CSV-based)
+## Rating Factors (CSV-based)
 
-The system now uses CSV files to manage all rating factors, making it easy to modify and maintain:
+The system uses CSV files to manage all rating factors, making it easy to modify and maintain. All factors are multiplicative (multiplied together) to calculate the final premium adjustment.
 
-- **Driver Age Factors**: Young driver surcharge, senior driver surcharge, teen driver surcharge
-- **Vehicle Type Factors**: Rate adjustments for different vehicle types (Sedan, SUV, Truck, etc.)
-- **Usage Factors**: Different usage types such as commuting, business, agricultural
-- **Safety Device Discounts**: Airbag, ABS, ESC, backup camera, LDW, AEB discounts
-- **Multi-car Discounts**: Discounts for multiple vehicles (2-5+ cars)
-- **Accident History Factors**: Rate adjustments based on accident history and type
-- **Violation History Factors**: Rate adjustments based on traffic violations
-- **Location Factors**: State and regional rate adjustments
+### Factor Types and Descriptions
 
-### Factor Configuration
-All factors are stored in CSV files in the `rating_factors/` directory:
-- `driver_age_factors.csv`
-- `vehicle_type_factors.csv`
-- `vehicle_usage_factors.csv`
-- `safety_features_factors.csv`
-- `accident_history_factors.csv`
-- `violation_history_factors.csv`
-- `multi_car_factors.csv`
-- `location_factors.csv`
+#### 1. Driver Age Factors (`driver_age_factors.csv`)
+Age-based rate adjustments that reflect the risk profile of different driver age groups:
+
+- **Young Driver Surcharge (16-25 years)**: 1.5x multiplier
+  - Higher risk due to inexperience and higher accident rates
+- **Teen Driver Surcharge (16-18 years)**: 2.0x multiplier
+  - Highest risk group with significantly higher accident rates
+- **New Driver Surcharge (19-24 years)**: 1.3x multiplier
+  - Additional surcharge for drivers with limited experience
+- **Experienced Driver Discount (30-50 years)**: 0.9x multiplier
+  - Discount for drivers in their prime with lower risk
+- **Senior Driver Surcharge (65+ years)**: 1.2x multiplier
+  - Slight increase due to potential health and reaction time factors
+
+#### 2. Vehicle Type Factors (`vehicle_type_factors.csv`)
+Rate adjustments based on vehicle type and associated risk:
+
+- **Sedan Base Rate**: 1.0x multiplier (baseline)
+- **SUV Surcharge**: 1.1x multiplier
+  - Higher repair costs and rollover risk
+- **Truck Surcharge**: 1.2x multiplier
+  - Higher damage potential and repair costs
+- **Motorcycle Surcharge**: 1.5x multiplier
+  - Significantly higher injury risk
+- **Commercial Vehicle Surcharge**: 1.3x multiplier
+  - Higher usage and exposure
+- **Agricultural Vehicle Discount**: 0.8x multiplier
+  - Lower usage and rural environment
+
+#### 3. Vehicle Usage Factors (`vehicle_usage_factors.csv`)
+Rate adjustments based on how the vehicle is primarily used:
+
+- **Commuting Base Rate**: 1.0x multiplier (baseline)
+- **Business Usage Surcharge**: 1.2x multiplier
+  - Higher mileage and exposure
+- **Agricultural Usage Discount**: 0.9x multiplier
+  - Lower risk rural environment
+- **Pleasure Usage Discount**: 0.95x multiplier
+  - Lower usage and risk
+- **Commercial Usage Surcharge**: 1.4x multiplier
+  - Highest usage and exposure
+
+#### 4. Safety Features Factors (`safety_features_factors.csv`)
+Discounts for vehicles equipped with safety features that reduce risk:
+
+- **Airbag Discount**: 0.95x multiplier (5% discount)
+- **Anti-lock Brakes (ABS) Discount**: 0.98x multiplier (2% discount)
+- **Electronic Stability Control (ESC) Discount**: 0.97x multiplier (3% discount)
+- **Backup Camera Discount**: 0.99x multiplier (1% discount)
+- **Lane Departure Warning (LDW) Discount**: 0.96x multiplier (4% discount)
+- **Automatic Emergency Braking (AEB) Discount**: 0.94x multiplier (6% discount)
+- **Multiple Safety Features Discount**: 0.92x multiplier (8% discount for 3+ features)
+
+#### 5. Accident History Factors (`accident_history_factors.csv`)
+Rate adjustments based on driver's accident history:
+
+- **No Accidents Discount**: 0.9x multiplier (10% discount)
+- **Single At-fault Accident Surcharge**: 1.2x multiplier (20% surcharge)
+- **Single Not-at-fault Accident**: 1.0x multiplier (no surcharge)
+- **Multiple Accidents Surcharge**: 1.5x multiplier (50% surcharge)
+- **Severe Accident Surcharge**: 1.8x multiplier (80% surcharge)
+- **DUI Accident Surcharge**: 2.0x multiplier (100% surcharge)
+
+#### 6. Violation History Factors (`violation_history_factors.csv`)
+Rate adjustments based on traffic violations:
+
+- **No Violations Discount**: 0.95x multiplier (5% discount)
+- **Single Minor Violation**: 1.1x multiplier (10% surcharge)
+- **Single Major Violation**: 1.3x multiplier (30% surcharge)
+- **Multiple Violations**: 1.4x multiplier (40% surcharge)
+- **DUI Violation**: 1.8x multiplier (80% surcharge)
+- **Speeding Violation**: 1.15x multiplier (15% surcharge)
+
+#### 7. Multi-car Factors (`multi_car_factors.csv`)
+Volume discounts for insuring multiple vehicles:
+
+- **Single Car Base Rate**: 1.0x multiplier (baseline)
+- **Two Car Discount**: 0.95x multiplier (5% discount)
+- **Three Car Discount**: 0.9x multiplier (10% discount)
+- **Four Car Discount**: 0.85x multiplier (15% discount)
+- **Five Plus Car Discount**: 0.8x multiplier (20% discount)
+
+#### 8. Location Factors (`location_factors.csv`)
+Geographic rate adjustments based on state and region:
+
+- **California Base Rate**: 1.0x multiplier (baseline)
+- **Texas Rate**: 0.9x multiplier (lower cost of living)
+- **Florida Rate**: 1.1x multiplier (higher risk factors)
+- **New York Rate**: 1.2x multiplier (high density, high costs)
+- **Illinois Rate**: 1.05x multiplier (slightly higher)
+- **Urban Area Surcharge**: 1.15x multiplier (15% surcharge)
+- **Rural Area Discount**: 0.9x multiplier (10% discount)
+
+### Factor Application Logic
+
+1. **Multiplicative Application**: All applicable factors are multiplied together
+   - Example: Young driver (1.5) × SUV (1.1) × Airbag (0.95) = 1.5675x total factor
+
+2. **Conditional Matching**: Factors only apply when their conditions are met
+   - Age factors check driver age ranges
+   - Vehicle factors check vehicle type/usage
+   - Safety factors check for specific features
+
+3. **Priority Handling**: When multiple factors of the same type could apply, the system uses the most specific match
+
+4. **Default Behavior**: If no factors apply, the system uses a 1.0x multiplier (no adjustment)
 
 ## Key Features
 

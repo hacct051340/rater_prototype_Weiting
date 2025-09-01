@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Demo script for Kemper Rater Prototype - Rule 2 Premium Calculation
+Demo script for Kemper Rater Prototype - Basic Premium Calculation
 """
 import sys
 import os
@@ -53,7 +53,7 @@ def create_sample_factors():
 
 def main():
     """Main demo function"""
-    print("Kemper Rater Prototype - Basic Premium Calculation (Rule 2)")
+    print("Kemper Rater Prototype - Basic Premium Calculation")
     print("=" * 60)
     
     # Setup

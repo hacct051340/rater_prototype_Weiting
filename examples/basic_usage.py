@@ -1,5 +1,5 @@
 """
-Basic usage example for Kemper Rater Prototype - Rule 2 Premium Calculation.
+Basic usage example for Kemper Rater Prototype - Basic Premium Calculation.
 """
 import sys
 import os
@@ -214,7 +214,7 @@ def example_multi_year_policy():
 
 
 if __name__ == "__main__":
-    print("Kemper Rater Prototype - Basic Premium Calculation (Rule 2)")
+    print("Kemper Rater Prototype - Basic Premium Calculation")
     print("=" * 60)
     
     # Run examples
