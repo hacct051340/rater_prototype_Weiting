@@ -39,26 +39,39 @@ Premium = BaseRate × ∏Factors × TermFactor
 
 ```
 kemper-rater-prototype/
-├── src/
-│   ├── models/           # Data models
-│   │   ├── coverage.py   # Coverage definitions
-│   │   ├── vehicle.py    # Vehicle information
-│   │   ├── driver.py     # Driver information
-│   │   ├── policy_info.py # Policy information
-│   │   ├── rate_table.py # Rate table system
-│   │   └── factors.py    # Factor system
-│   ├── calculators/      # Calculation engines
-│   │   ├── coverage_calculator.py # Individual coverage calculation
-│   │   └── premium_calculator.py  # Main calculation orchestrator
-│   └── utils/           # Utility functions
-│       ├── rounding.py  # Rounding utilities
-│       └── term_calculation.py # Term calculation utilities
-├── examples/            # Usage examples
-│   └── basic_usage.py   # Basic usage example
-├── tests/              # Test cases
-│   └── test_premium_calculation.py
-└── data/               # Sample data
-    └── sample_rates.json
+├── src/                        # Main source code
+│   ├── models/                 # Data models and business logic
+│   │   ├── coverage.py         # Coverage types and definitions
+│   │   ├── vehicle.py          # Vehicle models and types
+│   │   ├── driver.py           # Driver information models
+│   │   ├── rate_table.py       # Rate table system
+│   │   ├── factors.py          # Factor engine (CSV-based)
+│   │   └── factor_table_loader.py  # CSV factor loader
+│   ├── calculators/            # Calculation engines
+│   │   ├── coverage_calculator.py  # Individual coverage calculation
+│   │   └── premium_calculator.py   # Main premium orchestrator
+│   └── utils/                  # Utility functions
+│       ├── rounding.py         # Rounding utilities
+│       └── term_calculation.py # Term factor calculations
+├── rating_factors/             # CSV-based rating factors
+│   ├── driver_age_factors.csv      # Driver age adjustments
+│   ├── vehicle_type_factors.csv   # Vehicle type adjustments
+│   ├── vehicle_usage_factors.csv  # Usage type adjustments
+│   ├── safety_features_factors.csv # Safety feature discounts
+│   ├── accident_history_factors.csv # Accident history adjustments
+│   ├── violation_history_factors.csv # Violation history adjustments
+│   ├── multi_car_factors.csv       # Multi-car discounts
+│   ├── location_factors.csv        # Geographic adjustments
+│   └── README.md                   # Factor documentation
+├── data/                       # Data files
+│   └── sample_rates.json       # Sample rate data
+├── examples/                   # Usage examples
+│   └── basic_usage.py          # Comprehensive usage examples
+├── tests/                      # Test suite
+│   └── test_premium_calculation.py  # Unit and integration tests
+├── demo.py                     # Quick demo script
+├── README.md                   # This file
+└── IMPLEMENTATION_SUMMARY.md   # Implementation details
 ```
 
 ## Usage
