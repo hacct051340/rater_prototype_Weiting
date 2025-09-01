@@ -1,0 +1,6 @@
+factor_type,factor_name,min_age,max_age,factor_value,description
+DRIVER_AGE,Young Driver Surcharge,16,25,1.5,Additional charge for young drivers
+DRIVER_AGE,Senior Driver Surcharge,65,99,1.2,Additional charge for senior drivers
+DRIVER_AGE,Teen Driver Surcharge,16,18,2.0,High surcharge for teen drivers
+DRIVER_AGE,Experienced Driver Discount,30,50,0.9,Discount for experienced drivers
+DRIVER_AGE,New Driver Surcharge,19,24,1.3,Additional charge for new drivers

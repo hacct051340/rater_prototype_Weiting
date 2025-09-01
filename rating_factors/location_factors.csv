@@ -1,0 +1,8 @@
+factor_type,factor_name,state,region,factor_value,description
+LOCATION,California Base Rate,CA,West,1.0,Base rate for California
+LOCATION,Texas Rate,TX,South,0.9,Lower rate for Texas
+LOCATION,Florida Rate,FL,South,1.1,Higher rate for Florida
+LOCATION,New York Rate,NY,Northeast,1.2,Higher rate for New York
+LOCATION,Illinois Rate,IL,Midwest,1.05,Slightly higher rate for Illinois
+LOCATION,Urban Area Surcharge,any,Urban,1.15,15% surcharge for urban areas
+LOCATION,Rural Area Discount,any,Rural,0.9,10% discount for rural areas

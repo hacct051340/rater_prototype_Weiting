@@ -1,0 +1,7 @@
+factor_type,factor_name,accident_count,accident_type,factor_value,description
+ACCIDENT_HISTORY,No Accidents Discount,0,any,0.9,10% discount for no accidents
+ACCIDENT_HISTORY,Single Accident Surcharge,1,at_fault,1.2,20% surcharge for at-fault accident
+ACCIDENT_HISTORY,Single Accident No Surcharge,1,not_at_fault,1.0,No surcharge for not-at-fault accident
+ACCIDENT_HISTORY,Multiple Accidents Surcharge,2,any,1.5,50% surcharge for multiple accidents
+ACCIDENT_HISTORY,Severe Accident Surcharge,1,severe,1.8,80% surcharge for severe accident
+ACCIDENT_HISTORY,DUI Accident Surcharge,1,dui,2.0,100% surcharge for DUI accident

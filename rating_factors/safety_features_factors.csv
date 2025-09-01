@@ -1,0 +1,8 @@
+factor_type,factor_name,safety_feature,factor_value,description
+SAFETY_FEATURES,Airbag Discount,airbag,0.95,5% discount for airbag
+SAFETY_FEATURES,Anti-lock Brakes Discount,abs,0.98,2% discount for ABS
+SAFETY_FEATURES,Electronic Stability Control Discount,esc,0.97,3% discount for ESC
+SAFETY_FEATURES,Backup Camera Discount,backup_camera,0.99,1% discount for backup camera
+SAFETY_FEATURES,Lane Departure Warning Discount,ldw,0.96,4% discount for LDW
+SAFETY_FEATURES,Automatic Emergency Braking Discount,aeb,0.94,6% discount for AEB
+SAFETY_FEATURES,Multiple Safety Features Discount,multiple,0.92,8% discount for 3+ safety features

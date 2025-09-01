@@ -1,0 +1,6 @@
+factor_type,factor_name,vehicle_usage,factor_value,description
+VEHICLE_USAGE,Commuting Base Rate,Commuting,1.0,Base rate for commuting
+VEHICLE_USAGE,Business Usage Surcharge,Business,1.2,Additional charge for business use
+VEHICLE_USAGE,Agricultural Usage Discount,Agricultural,0.9,Discount for agricultural use
+VEHICLE_USAGE,Pleasure Usage Discount,Pleasure,0.95,Small discount for pleasure use
+VEHICLE_USAGE,Commercial Usage Surcharge,Commercial,1.4,High surcharge for commercial use

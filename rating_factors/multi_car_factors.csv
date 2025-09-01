@@ -1,0 +1,6 @@
+factor_type,factor_name,car_count,factor_value,description
+MULTI_CAR,Single Car Base Rate,1,1.0,Base rate for single car
+MULTI_CAR,Two Car Discount,2,0.95,5% discount for two cars
+MULTI_CAR,Three Car Discount,3,0.9,10% discount for three cars
+MULTI_CAR,Four Car Discount,4,0.85,15% discount for four cars
+MULTI_CAR,Five Plus Car Discount,5,0.8,20% discount for five or more cars

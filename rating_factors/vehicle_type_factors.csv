@@ -1,0 +1,7 @@
+factor_type,factor_name,vehicle_type,factor_value,description
+VEHICLE_TYPE,Sedan Base Rate,Sedan,1.0,Base rate for sedans
+VEHICLE_TYPE,SUV Surcharge,SUV,1.1,Additional charge for SUVs
+VEHICLE_TYPE,Truck Surcharge,Truck,1.2,Additional charge for trucks
+VEHICLE_TYPE,Motorcycle Surcharge,Motorcycle,1.5,High surcharge for motorcycles
+VEHICLE_TYPE,Commercial Vehicle Surcharge,Commercial,1.3,Additional charge for commercial vehicles
+VEHICLE_TYPE,Agricultural Vehicle Discount,Agricultural,0.8,Discount for agricultural vehicles

@@ -1,0 +1,256 @@
+{
+  "entries": [
+    {
+      "coverage_type": "Bodily Injury",
+      "vehicle_type": "Sedan",
+      "usage": "Commuting",
+      "age_range": "16-24",
+      "base_rate": 200.0,
+      "effective_date": "2024-01-01",
+      "expiry_date": ""
+    },
+    {
+      "coverage_type": "Bodily Injury",
+      "vehicle_type": "Sedan",
+      "usage": "Commuting",
+      "age_range": "25-30",
+      "base_rate": 150.0,
+      "effective_date": "2024-01-01",
+      "expiry_date": ""
+    },
+    {
+      "coverage_type": "Bodily Injury",
+      "vehicle_type": "Sedan",
+      "usage": "Commuting",
+      "age_range": "31-65",
+      "base_rate": 120.0,
+      "effective_date": "2024-01-01",
+      "expiry_date": ""
+    },
+    {
+      "coverage_type": "Bodily Injury",
+      "vehicle_type": "Sedan",
+      "usage": "Commuting",
+      "age_range": "65+",
+      "base_rate": 180.0,
+      "effective_date": "2024-01-01",
+      "expiry_date": ""
+    },
+    {
+      "coverage_type": "Bodily Injury",
+      "vehicle_type": "SUV",
+      "usage": "Commuting",
+      "age_range": "16-24",
+      "base_rate": 250.0,
+      "effective_date": "2024-01-01",
+      "expiry_date": ""
+    },
+    {
+      "coverage_type": "Bodily Injury",
+      "vehicle_type": "SUV",
+      "usage": "Commuting",
+      "age_range": "25-30",
+      "base_rate": 180.0,
+      "effective_date": "2024-01-01",
+      "expiry_date": ""
+    },
+    {
+      "coverage_type": "Bodily Injury",
+      "vehicle_type": "SUV",
+      "usage": "Commuting",
+      "age_range": "31-65",
+      "base_rate": 150.0,
+      "effective_date": "2024-01-01",
+      "expiry_date": ""
+    },
+    {
+      "coverage_type": "Bodily Injury",
+      "vehicle_type": "SUV",
+      "usage": "Commuting",
+      "age_range": "65+",
+      "base_rate": 220.0,
+      "effective_date": "2024-01-01",
+      "expiry_date": ""
+    },
+    {
+      "coverage_type": "Property Damage",
+      "vehicle_type": "Sedan",
+      "usage": "Commuting",
+      "age_range": "16-24",
+      "base_rate": 100.0,
+      "effective_date": "2024-01-01",
+      "expiry_date": ""
+    },
+    {
+      "coverage_type": "Property Damage",
+      "vehicle_type": "Sedan",
+      "usage": "Commuting",
+      "age_range": "25-30",
+      "base_rate": 80.0,
+      "effective_date": "2024-01-01",
+      "expiry_date": ""
+    },
+    {
+      "coverage_type": "Property Damage",
+      "vehicle_type": "Sedan",
+      "usage": "Commuting",
+      "age_range": "31-65",
+      "base_rate": 60.0,
+      "effective_date": "2024-01-01",
+      "expiry_date": ""
+    },
+    {
+      "coverage_type": "Property Damage",
+      "vehicle_type": "Sedan",
+      "usage": "Commuting",
+      "age_range": "65+",
+      "base_rate": 90.0,
+      "effective_date": "2024-01-01",
+      "expiry_date": ""
+    },
+    {
+      "coverage_type": "Property Damage",
+      "vehicle_type": "SUV",
+      "usage": "Commuting",
+      "age_range": "16-24",
+      "base_rate": 120.0,
+      "effective_date": "2024-01-01",
+      "expiry_date": ""
+    },
+    {
+      "coverage_type": "Property Damage",
+      "vehicle_type": "SUV",
+      "usage": "Commuting",
+      "age_range": "25-30",
+      "base_rate": 100.0,
+      "effective_date": "2024-01-01",
+      "expiry_date": ""
+    },
+    {
+      "coverage_type": "Property Damage",
+      "vehicle_type": "SUV",
+      "usage": "Commuting",
+      "age_range": "31-65",
+      "base_rate": 80.0,
+      "effective_date": "2024-01-01",
+      "expiry_date": ""
+    },
+    {
+      "coverage_type": "Property Damage",
+      "vehicle_type": "SUV",
+      "usage": "Commuting",
+      "age_range": "65+",
+      "base_rate": 110.0,
+      "effective_date": "2024-01-01",
+      "expiry_date": ""
+    },
+    {
+      "coverage_type": "Personal Injury Protection",
+      "vehicle_type": "Sedan",
+      "usage": "Commuting",
+      "age_range": "16-24",
+      "base_rate": 150.0,
+      "effective_date": "2024-01-01",
+      "expiry_date": ""
+    },
+    {
+      "coverage_type": "Personal Injury Protection",
+      "vehicle_type": "Sedan",
+      "usage": "Commuting",
+      "age_range": "25-30",
+      "base_rate": 120.0,
+      "effective_date": "2024-01-01",
+      "expiry_date": ""
+    },
+    {
+      "coverage_type": "Personal Injury Protection",
+      "vehicle_type": "Sedan",
+      "usage": "Commuting",
+      "age_range": "31-65",
+      "base_rate": 100.0,
+      "effective_date": "2024-01-01",
+      "expiry_date": ""
+    },
+    {
+      "coverage_type": "Personal Injury Protection",
+      "vehicle_type": "Sedan",
+      "usage": "Commuting",
+      "age_range": "65+",
+      "base_rate": 150.0,
+      "effective_date": "2024-01-01",
+      "expiry_date": ""
+    },
+    {
+      "coverage_type": "Collision",
+      "vehicle_type": "Sedan",
+      "usage": "Commuting",
+      "age_range": "16-24",
+      "base_rate": 400.0,
+      "effective_date": "2024-01-01",
+      "expiry_date": ""
+    },
+    {
+      "coverage_type": "Collision",
+      "vehicle_type": "Sedan",
+      "usage": "Commuting",
+      "age_range": "25-30",
+      "base_rate": 300.0,
+      "effective_date": "2024-01-01",
+      "expiry_date": ""
+    },
+    {
+      "coverage_type": "Collision",
+      "vehicle_type": "Sedan",
+      "usage": "Commuting",
+      "age_range": "31-65",
+      "base_rate": 250.0,
+      "effective_date": "2024-01-01",
+      "expiry_date": ""
+    },
+    {
+      "coverage_type": "Collision",
+      "vehicle_type": "Sedan",
+      "usage": "Commuting",
+      "age_range": "65+",
+      "base_rate": 350.0,
+      "effective_date": "2024-01-01",
+      "expiry_date": ""
+    },
+    {
+      "coverage_type": "Comprehensive",
+      "vehicle_type": "Sedan",
+      "usage": "Commuting",
+      "age_range": "16-24",
+      "base_rate": 200.0,
+      "effective_date": "2024-01-01",
+      "expiry_date": ""
+    },
+    {
+      "coverage_type": "Comprehensive",
+      "vehicle_type": "Sedan",
+      "usage": "Commuting",
+      "age_range": "25-30",
+      "base_rate": 150.0,
+      "effective_date": "2024-01-01",
+      "expiry_date": ""
+    },
+    {
+      "coverage_type": "Comprehensive",
+      "vehicle_type": "Sedan",
+      "usage": "Commuting",
+      "age_range": "31-65",
+      "base_rate": 120.0,
+      "effective_date": "2024-01-01",
+      "expiry_date": ""
+    },
+    {
+      "coverage_type": "Comprehensive",
+      "vehicle_type": "Sedan",
+      "usage": "Commuting",
+      "age_range": "65+",
+      "base_rate": 180.0,
+      "effective_date": "2024-01-01",
+      "expiry_date": ""
+    }
+  ]
+}

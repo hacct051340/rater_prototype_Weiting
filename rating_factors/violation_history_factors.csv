@@ -1,0 +1,7 @@
+factor_type,factor_name,violation_count,violation_type,factor_value,description
+VIOLATION_HISTORY,No Violations Discount,0,any,0.95,5% discount for no violations
+VIOLATION_HISTORY,Single Minor Violation,1,minor,1.1,10% surcharge for minor violation
+VIOLATION_HISTORY,Single Major Violation,1,major,1.3,30% surcharge for major violation
+VIOLATION_HISTORY,Multiple Violations,2,any,1.4,40% surcharge for multiple violations
+VIOLATION_HISTORY,DUI Violation,1,dui,1.8,80% surcharge for DUI violation
+VIOLATION_HISTORY,Speeding Violation,1,speeding,1.15,15% surcharge for speeding
