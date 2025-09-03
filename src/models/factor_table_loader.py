@@ -38,8 +38,9 @@ class FactorRecord:
 class FactorTableLoader:
     """Loader for CSV-based factor tables"""
     
-    def __init__(self, factors_dir: str = "rating_factors"):
+    def __init__(self, factors_dir: str = "rating_factors", verbose: bool = False):
         self.factors_dir = factors_dir
+        self.verbose = verbose
         self.factor_tables: Dict[str, List[FactorRecord]] = {}
         self._load_all_tables()
     
@@ -67,7 +68,8 @@ class FactorTableLoader:
                         factors.append(factor)
             
             self.factor_tables[table_name] = factors
-            print(f"Loaded {len(factors)} factors from {table_name}")
+            if self.verbose:
+                print(f"Loaded {len(factors)} factors from {table_name}")
             
         except Exception as e:
             print(f"Error loading table {table_name}: {e}")

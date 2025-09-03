@@ -23,16 +23,19 @@ def create_sample_rate_table():
     # Add sample rates
     rates = [
         # BI rates for Sedan, Commuting
+        RateTableEntry("Bodily Injury", "Sedan", "Commuting", "20-24", 180.0, "2024-01-01"),
         RateTableEntry("Bodily Injury", "Sedan", "Commuting", "25-30", 150.0, "2024-01-01"),
         RateTableEntry("Bodily Injury", "Sedan", "Commuting", "31-65", 120.0, "2024-01-01"),
         RateTableEntry("Bodily Injury", "Sedan", "Commuting", "65+", 180.0, "2024-01-01"),
         
         # PD rates for Sedan, Commuting
+        RateTableEntry("Property Damage", "Sedan", "Commuting", "20-24", 100.0, "2024-01-01"),
         RateTableEntry("Property Damage", "Sedan", "Commuting", "25-30", 80.0, "2024-01-01"),
         RateTableEntry("Property Damage", "Sedan", "Commuting", "31-65", 60.0, "2024-01-01"),
         RateTableEntry("Property Damage", "Sedan", "Commuting", "65+", 90.0, "2024-01-01"),
         
         # PIP rates for Sedan, Commuting
+        RateTableEntry("Personal Injury Protection", "Sedan", "Commuting", "20-24", 150.0, "2024-01-01"),
         RateTableEntry("Personal Injury Protection", "Sedan", "Commuting", "25-30", 120.0, "2024-01-01"),
         RateTableEntry("Personal Injury Protection", "Sedan", "Commuting", "31-65", 100.0, "2024-01-01"),
         RateTableEntry("Personal Injury Protection", "Sedan", "Commuting", "65+", 150.0, "2024-01-01"),
@@ -47,7 +50,8 @@ def create_sample_rate_table():
 def create_sample_factors():
     """Create factor engine using CSV-based factor tables"""
     # The FactorEngine now automatically loads factors from CSV files
-    factor_engine = FactorEngine()
+    # Set verbose=False to suppress factor loading output
+    factor_engine = FactorEngine(verbose=False)
     return factor_engine
 
 

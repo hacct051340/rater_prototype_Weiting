@@ -56,7 +56,8 @@ def setup_sample_rate_table():
 def setup_sample_factors():
     """Setup factor engine using CSV-based factor tables"""
     # The FactorEngine now automatically loads factors from CSV files
-    factor_engine = FactorEngine()
+    # Set verbose=False to suppress factor loading output
+    factor_engine = FactorEngine(verbose=False)
     return factor_engine
 
 
