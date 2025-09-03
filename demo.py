@@ -71,7 +71,7 @@ def main():
     
     policy_info = PolicyInfo(
         policy_effective_date="2024-01-01",
-        policy_expiry_date="2024-12-31",
+        policy_expiry_date="2025-01-01",  # Changed to exactly one year
         is_renewal=False
     )
     
