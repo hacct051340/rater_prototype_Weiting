@@ -8,15 +8,17 @@ from .factor_table_loader import FactorTableLoader
 class FactorEngine:
     """Engine for applying factors to premium calculations using CSV lookup"""
     
-    def __init__(self, factors_dir: str = "rating_factors"):
+    def __init__(self, factors_dir: str = "rating_factors", verbose: bool = False):
         """
         Initialize factor engine with CSV-based factor tables.
         
         Args:
             factors_dir: Directory containing CSV factor files
+            verbose: Whether to print factor loading information
         """
-        self.factor_loader = FactorTableLoader(factors_dir)
-        self._print_loaded_factors()
+        self.factor_loader = FactorTableLoader(factors_dir, verbose=verbose)
+        if verbose:
+            self._print_loaded_factors()
     
     def _print_loaded_factors(self):
         """Print summary of loaded factors"""
